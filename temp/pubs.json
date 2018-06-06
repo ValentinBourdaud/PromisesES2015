@@ -1,0 +1,66 @@
+ [{
+    "name": "La Regalade",
+    "owner": {
+      "firstName": "Valentin",
+      "lastName": "Bourdaud",
+      "mail": "bourdaudv@gmail.com"
+    },
+    "openDays": [
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "openHours": {
+      "start": 10,
+      "end": 4
+    },
+    "beers": [{
+      "type": "Blonde",
+      "name": "Triple Karmeliete"
+    }]
+  },
+  {
+    "name": "L'embuscade",
+    "owner": {
+      "firstName": "Olivier",
+      "lastName": "Dimper",
+      "mail": "mauvais@gmail.com"
+    },
+    "openDays": [
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "openHours": {
+      "start": 9,
+      "end": 3
+    },
+    "beers": [{
+      "type": "Brune",
+      "name": "Guinness"
+    }]
+  },
+
+  {
+    "name": "La Bodega",
+    "owner": {
+      "firstName": "Santiago",
+      "lastName": "Lima",
+      "mail": "elpiquillo@gmail.com"
+    },
+    "openDays": [
+      "Tuesday",
+      "Wednesday"
+    ],
+    "openHours": {
+      "start": 8,
+      "end": 5
+    },
+    "beers": [{
+      "type": "Rousse",
+      "name": "Pecheresse"
+    }]
+  }
+]
