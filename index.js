@@ -1,20 +1,27 @@
 const fs = require('fs-extra')
-const file = "temp/";
+const file = "/temp/";
 
+fs.emptyDir(file).then(() => {
 
+    console.log('Succès !'); 
+  })
+  .catch(err => {
+ 
+    console.error(err)
+ 
+  }).then(fs.copyFile('mocks/pubs.json','temp/pubs.json')).then
+  
+  (fs.watchFile('temp/pubs.json', (curr, prev) => {
 
-fs.stat(file, function (err) {
-    if (err) {
-        // Si le fichier n'existe pas, crée le
-        console.log('Folder doesn\'t exist, so I made the folder ');
-        return fs.mkdir(file);
-    }
-    //Si le fichier existe déjà
-    console.log('Does exist');
-});
+    console.log(`the current mtime is: ${curr.mtime}`);
 
-fs.watchFile('temp/pubs.json', (curr, prev) => {
-    console.log(`the current time is: ${curr.mtime}`);
-    console.log(`the previous time was: ${prev.mtime}`);
-});
+    console.log(`the previous mtime was: ${prev.mtime}`);
+
+    fs.readFile('temp/pubs.json', "utf8", function (err, data) {
+
+        console.log(data);
+
+    });
+
+}))
 
